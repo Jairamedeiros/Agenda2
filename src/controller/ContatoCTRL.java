@@ -21,7 +21,7 @@ public class ContatoCTRL {
     
     public boolean adcionar(String nome, String fone){
         Contato contato = new Contato();
-        contato.setNome(nome);
+        contato.setNome(nome.toUpperCase());
         contato.setFone(fone);
         return dao.insert(contato);
         
@@ -30,7 +30,7 @@ public class ContatoCTRL {
     public boolean atualizar(int id, String nome, String fone){
         Contato contato = new Contato();
         contato.setId(id);
-        contato.setNome(nome);
+        contato.setNome(nome.toUpperCase());
         contato.setFone(fone);
         return dao.update(contato);
         
